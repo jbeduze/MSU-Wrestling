@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_extras.stylable_container import stylable_container
 
 def set_title(varTitle, varSubtitle):
         with stylable_container(
