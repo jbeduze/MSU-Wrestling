@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_extras.stylable_container import stylable_container
 from tabs import main, personal_stats, personalized_plans, profile, team, ai_chat_and_upload, coach
-#st.set_page_config(layout="wide")
+st.set_page_config(layout="wide")
 
 
 # Background image URL
