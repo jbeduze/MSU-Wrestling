@@ -23,13 +23,13 @@ def large_stylable_container_1(varTitle, varSubtitle, content):
                         }}
                         .title {{
                             font-weight: bold;
-                            color: #12472d;
+                            color: #1C453B;
                             font-size: 1.3em;
                             margin-bottom: 0.3em;
                         }}
                         .subtitle {{
                             font-weight: bold;
-                            color: #12472d;
+                            color: #1C453B;
                             font-size: 1em;
                             margin-bottom: 1em;
                         }}

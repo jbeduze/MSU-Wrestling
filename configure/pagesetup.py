@@ -16,7 +16,7 @@ def MSU_logo():
             .logo-container {
                 position: fixed;
                 top: 0;  /* Adjust as needed to position higher */
-                right: 0;  /* Keep logo on the right */
+                left: 0;  /* Keep logo on the right */
                 z-index: 999;  /* Ensure logo is on top of other content */
             }
         </style>
