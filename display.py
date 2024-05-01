@@ -42,7 +42,28 @@ def set_background_1():
     """
     Set the background of the Streamlit app using a locally stored image.
     """
-    image_path = 'configure/msuhelmet.png'  # Update this path
+    image_path = 'configure/msuhelmetangle.png'  # Update this path
+    with open(image_path, "rb") as image_file:
+        encoded_string = base64.b64encode(image_file.read()).decode()
+    
+    background_style = f"""
+    <style>
+    .stApp {{
+        background-image: url("data:image/png;base64,{encoded_string}");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }}
+    </style>
+    """
+
+    st.markdown(background_style, unsafe_allow_html=True)
+
+def set_background_2():
+    """
+    Set the background of the Streamlit app using a locally stored image.
+    """
+    image_path = 'configure/msuhelmetfront.png'  # Update this path
     with open(image_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode()
     
@@ -71,3 +92,21 @@ def hide_streamlit_header():
         </style>
         """
     st.markdown(hide_header_style, unsafe_allow_html=True)
+
+#display msu Wrestling on app.py
+def Header_display():
+    # Inject custom CSS
+    css_style = """
+    <style>
+        .cinzel-header {
+            position: absolute;  # Absolute positioning
+            top: 100px;          # 100px from the top of the viewport
+            left: 60%;           # Horizontally centered
+            transform: translateX(-50%);  # Ensure it's perfectly centered
+            font-size: 24px;     # Font size
+            color: #4a4a4a;      # Font color
+        }
+    </style>
+    """
+    st.markdown(css_style, unsafe_allow_html=True)
+    st.markdown('<p class="cinzel-header">MSU Wrestling</p>', unsafe_allow_html=True)

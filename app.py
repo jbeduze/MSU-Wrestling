@@ -1,24 +1,16 @@
 import streamlit as st
-import selector.login_screen as ls
 from configure import pagesetup as ps
 from configure import stylable as stbl
-from display import display_fonts, set_background, set_background_1, hide_streamlit_header
+from display import display_fonts, set_background, set_background_1, hide_streamlit_header, Header_display
 from configure.stylable import large_stylable_container_1, additional_content_1
 
-ps.Menu_tabs_display()
-ps.MSU_logo()
-display_fonts()
+st.set_page_config(page_title="MSU Wrestling", page_icon="🧊", layout="wide")
 hide_streamlit_header()
-# # URL of the background image
-# image_url = "https://raw.githubusercontent.com/jbeduze/MSU-Wrestling/main/.streamlit/config/e52cca5a-1264-4351-ac5e-ad48bd46ea9b.webp"
-# set_background(image_url)
-
 set_background_1()
-
-st.markdown('<p class="cinzel-header">MSU Wrestling</p>', unsafe_allow_html=True)
-
-col1, col2, col3 = st.columns([2,1,4])
-
+ps.MSU_logo()
+Header_display()
+display_fonts()
+ps.Menu_tabs_display()
 
 st.write("Welcome to the wrestling site")
 
