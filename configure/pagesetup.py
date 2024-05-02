@@ -4,23 +4,22 @@ from tabs import main, personal_stats, personalized_plans, profile, team, ai_cha
 from configure import stylable as styl
 
 
-#MSU white logo display (local)
-def MSU_logo():
-    """Displays the MSU logo in the upper left corner of the page with custom CSS."""
-    # Inject custom CSS to move the image higher and to the right
-    st.markdown("""
-        <style>
-            .logo-container {
-                position: fixed;
-                top: 0;  /* Adjust as needed to position higher */
-                left: 0;  /* Keep logo on the left */
-                z-index: 999;  /* Ensure logo is on top of other content */
-            }
-        </style>
-        <div class="logo-container">
-            <img src="https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/msuspartans.com/images/responsive/main_logo_white.svg" alt="MSU Logo" style="width: 100px; height: auto;">
-        </div>
-        """, unsafe_allow_html=True)
+#display msu Wrestling on app.py
+def Header_display():
+    # Inject custom CSS
+    css_style = """
+    <style>
+        .cinzel-header {
+            position: absolute;  # Absolute positioning
+            top: 100px;          # 100px from the top of the viewport
+            left: 60%;           # Horizontally centered
+            transform: translateX(-50%);  # Ensure it's perfectly centered
+            font-size: 24px;     # Font size
+            color: #4a4a4a;      # Font color
+        }
+    </style>
+    """
+
 
 
 
@@ -54,3 +53,33 @@ def Menu_tabs_display():
         for tab, page in zip(tabs, pages):
             with tab:
                 page.show()
+
+import streamlit as st
+import os  # Import os to check file existence
+
+def umich_mascot():
+    """Displays the umich mascot in the upper left corner of the page with custom CSS."""
+    # Local path to the PNG file
+    local_image_path = "https://github.com/jbeduze/MSU-Wrestling/blob/main/Wolverine_single.png"  # Change this to the path of your local file
+
+    # Check if the file exists
+    if not os.path.exists(local_image_path):
+        st.error(f"File not found: {local_image_path}")
+        return  # Exit the function if file is not found
+
+    # Inject custom CSS to move the image slightly down and to the right
+    st.markdown("""
+        <style>
+            .logo-container {
+                position: fixed;
+                top: 10px;  /* Adjusted down by 10px */
+                left: 10px;  /* Adjusted right by 10px */
+                z-index: 999;  /* Ensure logo is on top of other content */
+            }
+        </style>
+        <div class="logo-container">
+            <img src="{}" alt="MSU Logo" style="width: 100px; height: auto;">
+        </div>
+        """.format(local_image_path), unsafe_allow_html=True)
+
+

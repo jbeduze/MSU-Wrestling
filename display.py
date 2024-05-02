@@ -42,7 +42,7 @@ def set_background_1():
     """
     Set the background of the Streamlit app using a locally stored image.
     """
-    image_path = 'configure/msuhelmetangle.png'  # Update this path
+    image_path = 'configure/(homepage).png'  # Update this path
     with open(image_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode()
     
@@ -63,7 +63,7 @@ def set_background_2():
     """
     Set the background of the Streamlit app using a locally stored image.
     """
-    image_path = 'configure/msuhelmetfront.png'  # Update this path
+    image_path = 'configure/(login).png'  # Update this path
     with open(image_path, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read()).decode()
     
