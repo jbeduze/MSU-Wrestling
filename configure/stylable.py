@@ -57,7 +57,7 @@ def large_stylable_container_2(varTitle, varSubtitle, content):
         st.markdown(f"""
             <style>
                 .container {{
-                    border: 2px solid #E6E8FA;  /* Darker egg shell border */
+                    border: 2px solid #fffff;  /* Darker egg shell border */
                     background-color: rgba(255, 255, 240, 0.75);  /* Off white and mostly transparent background */
                     width: 100%;
                     height: 200%;  /* Twice as long */

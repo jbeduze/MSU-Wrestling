@@ -1,5 +1,6 @@
 import streamlit as st
 import base64
+from tabs import main, personal_stats, personalized_plans, profile, team, ai_chat_and_upload, coach
 
 
 #fonts
@@ -17,6 +18,28 @@ def display_fonts():
     # st.header('This is a header')  # This will also use Cinzel
     # st.subheader('This is a subheader')  # Adjust in CSS if you want this in Cinzel
     # st.write('This is regular text content.')  # This will use Forum
+
+def load_css():
+    """Loads an external CSS file and injects it into the Streamlit app."""
+    with open("style.css", "r") as f:
+        css = f.read()
+        st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+
+def main():
+    load_css("style.css")
+    # Your code to create tabs and other app functionality
+    with st.container():
+        tabs = st.tabs(["Main", "Personal Stats", "Personalized Plans", "Profile", "Team", "AI Chat and Upload", "Coach"])
+        # Functions to define content for each tab
+        pages = [main, personal_stats, personalized_plans, profile, team, ai_chat_and_upload, coach]
+
+        for tab, page in zip(tabs, pages):
+            with tab:
+                page()  # Assuming each page function handles its display
+
+if __name__ == "__main__":
+    main()
+
 
 #background image
 def set_background(url):
@@ -109,4 +132,4 @@ def Header_display():
     </style>
     """
     st.markdown(css_style, unsafe_allow_html=True)
-    st.markdown('<p class="cinzel-header">MSU Wrestling</p>', unsafe_allow_html=True)
+    st.markdown('<p class="cinzel-header">University of Michigan Wrestling</p>', unsafe_allow_html=True)

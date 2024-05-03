@@ -1,42 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Forum&display=swap');
 
-/* Class for Cinzel font with dynamic weight */
-.cinzel-header {
-  font-family: 'Cinzel', serif;
-  font-optical-sizing: auto;
-  font-weight: 700; /* You can change this based on your needs */
-  font-style: normal;
-  font-size: 32pt;
+
+/* Tab customization */
+.stTabs {
+  border-radius: 2px; /* Rounded corners */
+  border: 2px solid #FF4B4B; /* Red border */
+  background-color: #164bb4; /* Light grey background */
 }
 
-/* Class for Forum font for regular text */
-.forum-regular {
-  font-family: 'Forum', serif;
-  font-weight: 400;
-  font-style: normal;
+/* CSS for the tabs font and alignment */
+.st-bd {
+  font-size: 24px; /* Larger font size for tabs */
+  font-weight: bold; /* Bold font */
 }
 
-/* General styling that applies to body and typical text elements */
-body, p, div, h4, h5, h6 {
-  font-family: 'Forum', serif; /* Default font for text */
-  font-size: 22px;
-  color: #ffffff;
-}
-/* Specific styles for Cinzel font applied to h1, h2, and h3 */
-h1 {
-  font-family: 'Cinzel', serif;
-  font-weight: 700; /* Bold weight for main titles */
-  font-size: 32px; /* Larger size for main titles */
+/* CSS for active tab */
+.st-at {
+  background-color: #FF4B4B; /* Red background for active tab */
+  color: white; /* White text for active tab */
 }
 
-h2 {
-  font-family: 'Cinzel', serif;
-  font-weight: 600; /* Slightly lighter weight for secondary headers */
-  font-size: 28px; /* Slightly smaller size than h1 */
-}
-
-h3 {
-  font-family: 'Cinzel', serif;
-  font-weight: 400; /* Slightly lighter weight for secondary headers */
-  font-size: 28px; /* Slightly smaller size than h1 */
+/* CSS for inactive tab */
+.st-bc {
+  background-color: rgb(211, 219, 99); /* White background for inactive tabs */
+  color: black; /* Black text for inactive tabs */
 }
